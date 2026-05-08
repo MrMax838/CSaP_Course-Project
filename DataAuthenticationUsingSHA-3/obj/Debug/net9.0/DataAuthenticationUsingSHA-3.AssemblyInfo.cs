@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DataAuthenticationUsingSHA-3")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3e6968ca05c22613f7186a9bd5631e4da8592825")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a94ce4b6f490110bf282795ea6aae446502ed326")]
 [assembly: System.Reflection.AssemblyProductAttribute("DataAuthenticationUsingSHA-3")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DataAuthenticationUsingSHA-3")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

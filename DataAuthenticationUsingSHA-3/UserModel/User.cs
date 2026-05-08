@@ -1,5 +1,3 @@
-using System.Text;
-using CSaP.CourseProject.DataModel;
 using CSaP.CourseProject.RSA;
 
 namespace CSaP.CourseProject.DataModel

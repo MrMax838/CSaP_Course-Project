@@ -1,6 +1,6 @@
 namespace CSaP.CourseProject.Shell.Commands
 {
-    public class VerifyCommand : ICommand
+    public sealed class DeleteMessageCommand : ICommand
     {
         public void Execute()
         {

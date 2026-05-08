@@ -34,28 +34,130 @@
 
 // ## License 
 
-> RSA.cs  
-> |  
-> ├──RSACore  
-> |  ├──RSAModules  
-> |  |  ├──ModularArithmetic.cs  
-> |  |  └──PrimeGenerator.cs  
-> |  └──RSACore.cs  
-> |  
-> ├──RSAKeys  
-> |  ├──IKey.cs  
-> |  ├──RSAKeyGenerator.cs  
-> |  └──RSAKeyPair.cs  
-> ├──RSAPackaging  
-> |  ├──OAEP  
-> |  |  ├──DBGenerator.cs  
-> |  |  ├──OAEP.cs  
-> |  |  └──SeedGenerator.cs  
-> |  ├──PSS  
-> |  |  ├──DBGenerator.cs  
-> |  |  ├──PSS.cs  
-> |  |  └──SaltGenerator.cs  
-> |  ├──MaskGeneration.cs  
-> |  └──TypesFormatter.cs  
-> └──Wrapper  
->    └──Wrapper.cs  
+RSA.cs  
+|  
+├──RSACore    
+|  ├──RSAModules  
+|  |  ├──ModularArithmetic.cs  
+|  |  └──PrimeGenerator.cs  
+|  └──RSACore.cs  
+|  
+├──RSAKeys  
+|  ├──IKey.cs  
+|  ├──RSAKeyGenerator.cs  
+|  └──RSAKeyPair.cs  
+├──RSAPackaging  
+|  ├──OAEP  
+|  |  ├──DBGenerator.cs  
+|  |  ├──OAEP.cs  
+|  |  └──SeedGenerator.cs  
+|  ├──PSS  
+|  |  ├──DBGenerator.cs  
+|  |  ├──PSS.cs  
+|  |  └──SaltGenerator.cs  
+|  ├──MaskGeneration.cs  
+|  └──TypesFormatter.cs  
+└──Wrapper  
+   └──Wrapper.cs  
+
+DataAuthenticationUsingSHA-3  
+|  
+├──Initialization  
+|  ├──ApplicationContext.cs  
+|  └──Initializer.cs  
+|  
+├──IOData  
+|  ├──Messages.json  
+|  └──Users.json  
+|  
+├──MessageModel  
+|  ├──MessageRecord.cs  
+|  ├──MessageRepository.cs  
+|  └──SignedMessage.cs  
+|  
+├──Shell  
+|  ├──Commands  
+|  |  ├──DeletaMessageCommand.cs  
+|  |  ├──ExiteCommand.cs  
+|  |  ├──HelpCommand.cs  
+|  |  ├──ICommand.cs  
+|  |  ├──ListCommand.cs  
+|  |  ├──SendCommand.cs  
+|  |  ├──TamperCommand.cs  
+|  |  └──VerifyCommand.cs  
+|  |  
+|  └──Parser.cs  
+|  
+├──UserModel  
+|  ├──IUser.cs  
+|  ├──User.cs  
+|  ├──UserRecord.cs  
+|  └──UserRepository.cs  
+|  
+├──RSA  
+|  ├──RSACore    
+|  |  ├──RSAModules    
+|  |  |  ├──ModularArithmetic.cs    
+|  |  |  └──PrimeGenerator.cs  
+|  |  └──RSACore.cs  
+|  |  
+|  ├──RSAKeys  
+|  |  ├──IKey.cs  
+|  |  ├──RSAKeyGenerator.cs  
+|  |  └──RSAKeyPair.cs  
+|  |  
+|  ├──RSAPackaging  
+|  |  ├──OAEP  
+|  |  |  ├──DBGenerator.cs  
+|  |  |  ├──OAEP.cs  
+|  |  |  └──SeedGenerator.cs  
+|  |  |  
+|  |  ├──PSS  
+|  |  |  ├──DBGenerator.cs  
+|  |  |  ├──PSS.cs  
+|  |  |  └──SaltGenerator.cs  
+|  |  |  
+|  |  ├──MaskGeneration.cs  
+|  |  └──TypesFormatter.cs  
+|  |  
+|  ├──Wrapper    
+|  |  └──Wrapper.cs  
+|  |  
+|  └──RSA.cs  
+|  
+├──Program.cs  
+└──README.md  
+
+
+Available commands:
+
+help
+    Show available commands
+
+list users
+    Show all users
+
+list messages
+    Show all messages
+
+send
+    Create and sign message
+
+verify <messageID>
+    Verify message signature
+
+verify <messageID> --verbose
+    Show detailed verification process
+
+tamper <messageID>
+    Simulate message tampering attack
+
+delete <messageID>
+    Delete message
+
+exit
+    Exit application
+
+
+message modified
+signature old
