@@ -14,9 +14,9 @@ namespace CSaP.CourseProject.Service
 
         public SignedMessage Tamper(string originalMessageID, string newMessageID, string target, string tamperedMessage)
         {
-            SignedMessage origenel = _context.Messages.Get(originalMessageID);
+            SignedMessage original = _context.Messages.Get(originalMessageID);
 
-            return new SignedMessage(newMessageID, target, tamperedMessage, origenel.Signature, DateTime.UtcNow);
+            return new SignedMessage(newMessageID, target, tamperedMessage, original.Signature, DateTime.UtcNow);
         }
     }
 }

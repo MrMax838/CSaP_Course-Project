@@ -74,7 +74,9 @@ namespace CSaP.CourseProject.Shell
                     parsed => new TamperCommand(_context, parsed, new MessageTamper(_context)), 
                     new List<CommandHelpEntry>()
                     {
-                            new("tamper <messageID>", "Simulate message tampering attack")
+                            new("tamper <messageID>", "Simulate message tampering attack"),
+                            new("tamper <messageID> --message", "Simulate message tampering attack"),
+                            new("tamper <messageID> --sender", "Simulate sender tampering attack")
                     }),
 
                 ["add"] = new CommandDescriptor(

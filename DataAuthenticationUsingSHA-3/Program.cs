@@ -20,6 +20,5 @@ class Program
         }
 
         Console.WriteLine("Simulation finished");
-        Console.ReadKey();
     }
 }

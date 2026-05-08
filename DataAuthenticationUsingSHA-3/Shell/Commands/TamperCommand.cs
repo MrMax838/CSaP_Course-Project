@@ -1,3 +1,4 @@
+using System.Text;
 using CSaP.CourseProject.DataModel;
 using CSaP.CourseProject.Service;
 using CSaP.CourseProject.Shell.Parsing;
@@ -25,20 +26,35 @@ namespace CSaP.CourseProject.Shell.Commands
 
             string originalMessageID = _parsed.Arguments[0];
 
+            bool isMessage = _parsed.Flags.Contains("--message");
+            bool isSender = _parsed.Flags.Contains("--sender");
+
+            string realSender = _context.Messages.Get(originalMessageID).SenderID;
+            string? target = realSender;
+            string? tamperedMessage = _context.Messages.Get(originalMessageID).Message;
+
             Console.Write("New message ID: ");
             string? newMessageID = Console.ReadLine();
 
-            string realSender = _context.Users.Get(originalMessageID).UserID;
+            if (isSender)
+            {
+                Console.Write("Target: ");
+                target = Console.ReadLine();
+            }
 
-            Console.Write("Target: ");
-            string? target = Console.ReadLine();
-
-            Console.Write("Tampered message: ");
-            string? tamperedMessage = Console.ReadLine();
+            if (_parsed.Flags.Select(f => f.StartsWith('-')).Count() == 0 || isMessage)
+            {
+                Console.Write("Tampered message: ");
+                tamperedMessage = Console.ReadLine();     
+            }
 
             ValidateInput(newMessageID, target, tamperedMessage);
 
             SignedMessage tampered = _tamperService.Tamper(originalMessageID, newMessageID!, target!, tamperedMessage!);
+
+            _context.Messages.Add(tampered);
+
+            Console.WriteLine("Message tampered successfully\n");
         }
 
         private void ValidateInput(string? messageID, string? senderID, string? text)
