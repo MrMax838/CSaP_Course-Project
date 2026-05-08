@@ -13,3 +13,12 @@ D:\University\3 курс\КСтП +КП\Курсова робота\Code\DataAut
 D:\University\3 курс\КСтП +КП\Курсова робота\Code\DataAuthenticationUsingSHA-3\obj\Debug\net9.0\DataAuthenticationUsingSHA-3.pdb
 D:\University\3 курс\КСтП +КП\Курсова робота\Code\DataAuthenticationUsingSHA-3\obj\Debug\net9.0\DataAuthenticationUsingSHA-3.genruntimeconfig.cache
 D:\University\3 курс\КСтП +КП\Курсова робота\Code\DataAuthenticationUsingSHA-3\obj\Debug\net9.0\ref\DataAuthenticationUsingSHA-3.dll
+D:\University\3 курс\КСтП +КП\Курсова робота\Code\DataAuthenticationUsingSHA-3\bin\Debug\net9.0\RSA.deps.json
+D:\University\3 курс\КСтП +КП\Курсова робота\Code\DataAuthenticationUsingSHA-3\bin\Debug\net9.0\RSA.runtimeconfig.json
+D:\University\3 курс\КСтП +КП\Курсова робота\Code\DataAuthenticationUsingSHA-3\bin\Debug\net9.0\RSA.exe
+D:\University\3 курс\КСтП +КП\Курсова робота\Code\DataAuthenticationUsingSHA-3\bin\Debug\net9.0\DiscreteMathLibrary.dll
+D:\University\3 курс\КСтП +КП\Курсова робота\Code\DataAuthenticationUsingSHA-3\bin\Debug\net9.0\RSA.dll
+D:\University\3 курс\КСтП +КП\Курсова робота\Code\DataAuthenticationUsingSHA-3\bin\Debug\net9.0\RSA.pdb
+D:\University\3 курс\КСтП +КП\Курсова робота\Code\DataAuthenticationUsingSHA-3\bin\Debug\net9.0\DiscreteMathLibrary.pdb
+D:\University\3 курс\КСтП +КП\Курсова робота\Code\DataAuthenticationUsingSHA-3\obj\Debug\net9.0\DataAuthenticationUsingSHA-3.csproj.AssemblyReference.cache
+D:\University\3 курс\КСтП +КП\Курсова робота\Code\DataAuthenticationUsingSHA-3\obj\Debug\net9.0\DataAuth.EB61A556.Up2Date

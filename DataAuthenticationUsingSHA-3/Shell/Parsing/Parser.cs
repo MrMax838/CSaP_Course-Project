@@ -12,7 +12,7 @@ namespace CSaP.CourseProject.Shell.Parsing
             List<string> arguments = new();
             List<string> flags = new();
 
-            foreach (string part in parts)
+            foreach (string part in parts.Skip(1))
             {
                 if (part.StartsWith('-'))
                 {

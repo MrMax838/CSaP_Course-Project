@@ -6,12 +6,12 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v9.0": {
-      "DataAuthenticationUsingSHA-3/1.0.0": {
+      "RSA/1.0.0": {
         "dependencies": {
-          "RSA": "1.0.0"
+          "DiscreteMathLibrary": "1.0.0"
         },
         "runtime": {
-          "DataAuthenticationUsingSHA-3.dll": {}
+          "RSA.dll": {}
         }
       },
       "DiscreteMathLibrary/1.0.0": {
@@ -21,32 +21,16 @@
             "fileVersion": "1.0.0.0"
           }
         }
-      },
-      "RSA/1.0.0": {
-        "dependencies": {
-          "DiscreteMathLibrary": "1.0.0"
-        },
-        "runtime": {
-          "RSA.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
       }
     }
   },
   "libraries": {
-    "DataAuthenticationUsingSHA-3/1.0.0": {
+    "RSA/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "DiscreteMathLibrary/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "RSA/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

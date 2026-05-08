@@ -1,19 +1,25 @@
-﻿namespace CSaP.CourseProject;
+﻿using CSaP.CourseProject.Service;
+
+namespace CSaP.CourseProject;
 
 class Program
 {
     static void Main()
     {
-        while (true)
+        try
         {
-            Console.Write("> ");
+            ApplicationContext context = Initializer.Initialize();
 
-            string? input = Console.ReadLine();
+            Shell.Shell shell = Shell.Shell.Create(context);
 
-            if (string.IsNullOrWhiteSpace(input))
-                continue;
-
-            //CommandHandler.Execute(input);
+            shell.Start();
         }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Fatal error: {ex.Message}");
+        }
+
+        Console.WriteLine("Simulation finished");
+        Console.ReadKey();
     }
 }

@@ -44,18 +44,19 @@ namespace CSaP.CourseProject.Shell.Commands
 
         private void ListUsers()
         {
-            Console.WriteLine("Users:\n");
+            Console.WriteLine("Users:");
 
-            foreach (User user in _context.Users.GetAllUsers())
+            foreach (User user in _context.Users.GetAll())
             {
                 Console.WriteLine($"- {user.UserID}");
             }
+            Console.WriteLine();
         }
 
         private void ListMessages()
         {
             bool isExtended = _parsed.Flags.Contains("--extended");
-            IEnumerable<SignedMessage> messages = _context.Messages.GetAllMessage();
+            IEnumerable<SignedMessage> messages = _context.Messages.GetAll();
 
             if (!messages.Any())
             {
@@ -66,7 +67,7 @@ namespace CSaP.CourseProject.Shell.Commands
 
             Console.WriteLine("Messages:\n");
 
-            foreach (SignedMessage message in _context.Messages.GetAllMessage())
+            foreach (SignedMessage message in _context.Messages.GetAll())
             {
                 if (isExtended)
                 {
@@ -83,6 +84,8 @@ namespace CSaP.CourseProject.Shell.Commands
                     Console.WriteLine($"- {message.MessageID}");
                 }
             }
+            
+            Console.WriteLine();
         }
     }
 }

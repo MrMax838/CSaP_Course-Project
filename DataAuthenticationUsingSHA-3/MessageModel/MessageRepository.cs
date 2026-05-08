@@ -48,11 +48,16 @@ namespace CSaP.CourseProject.DataModel
             return ReadAll().Any(m => m.MessageID == messageID);
         }
 
-        public SignedMessage? GetMessage(string messageID)
+        public SignedMessage Get(string messageID)
         {
             MessageRecord record = ReadAll().First(m => m.MessageID == messageID);
 
             return ToMessage(record);
+        }
+
+        public IEnumerable<SignedMessage> GetAll()
+        {
+            return ReadAll().Select(ToMessage);
         }
 
         public void Add(SignedMessage message)
@@ -69,9 +74,13 @@ namespace CSaP.CourseProject.DataModel
             SaveAll(records);
         }
 
-        public IEnumerable<SignedMessage> GetAllMessage()
+        public void Delete(string messageID)
         {
-            return ReadAll().Select(ToMessage);
+            List<MessageRecord> records = ReadAll();
+
+            records.RemoveAll(x => x.MessageID == messageID);
+
+            SaveAll(records);
         }
 
         private List<MessageRecord> ReadAll()

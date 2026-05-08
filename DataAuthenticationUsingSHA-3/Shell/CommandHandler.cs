@@ -1,3 +1,4 @@
+using CSaP.CourseProject.Service;
 using CSaP.CourseProject.Shell.Commands;
 using CSaP.CourseProject.Shell.Parsing;
 
@@ -7,22 +8,16 @@ namespace CSaP.CourseProject.Shell
     {
         private readonly ApplicationContext _context;
         private readonly Dictionary<string, CommandDescriptor> _commands;
+        private readonly Shell _shell;
 
 
-        public CommandHandler(ApplicationContext context)
+        public CommandHandler(ApplicationContext context, Shell shell)
         {
             _context = context;
+            _shell = shell;
             
             _commands = new()
             {
-                ["deleteMessage"] = new CommandDescriptor(
-                    "", 
-                    _ => new DeleteMessageCommand(), 
-                    new List<CommandHelpEntry>()
-                    {
-                        new("", "")
-                    }),
-                
                 ["help"] = new CommandDescriptor(
                     "help", 
                     _ => new HelpCommand(this), 
@@ -31,12 +26,20 @@ namespace CSaP.CourseProject.Shell
                         new("help", "Show available commands")
                     }),
                 
-                ["exit"] = new CommandDescriptor(
-                    "", 
-                    _ => new ExiteCommand(), 
+                ["clear"] = new CommandDescriptor(
+                    "clear", 
+                     _ => new ClearCommand(), 
                     new List<CommandHelpEntry>()
                     {
-                        new("", "")
+                        new("clear", "Clear console")
+                    }),
+                
+                ["exit"] = new CommandDescriptor(
+                    "exit", 
+                    _ => new ExiteCommand(_shell), 
+                    new List<CommandHelpEntry>()
+                    {
+                        new("exit", "Exit from the shell")
                     }),
                 
                 ["list"] = new CommandDescriptor(
@@ -45,31 +48,49 @@ namespace CSaP.CourseProject.Shell
                     new List<CommandHelpEntry>()
                     {
                         new("list users", "Show all users"),
-                        new("list messages", "Show all messages")
+                        new("list messages", "Show all messages"),
+                        new("list messages --extended", "Show all messages with detailed information")
                     }),
                 
                 ["send"] = new CommandDescriptor(
-                    "", 
-                    _ => new SendCommand(_context), 
+                    "send", 
+                    parsed => new SendCommand(_context, parsed), 
                     new List<CommandHelpEntry>()
                     {
-                            new("", "")
-                    }),
-                
-                ["tamper"] = new CommandDescriptor(
-                    "", 
-                    _ => new TamperCommand(), 
-                    new List<CommandHelpEntry>()
-                    {
-                            new("", "")
+                            new("send", "Create and sign message")
                     }),
                 
                 ["verify"] = new CommandDescriptor(
-                    "", 
-                    _ => new VerifyCommand(), 
+                    "verify",
+                    parsed => new VerifyCommand(parsed, new MessageVerifier(_context)), 
                     new List<CommandHelpEntry>()
                     {
-                            new("", "")
+                            new("verify <messageID>", "Verify message signature"),
+                            new("verify <messageID> --extended", "Show detailed verification process")
+                    }),
+                
+                ["tamper"] = new CommandDescriptor(
+                    "tamper", 
+                    parsed => new TamperCommand(_context, parsed, new MessageTamper(_context)), 
+                    new List<CommandHelpEntry>()
+                    {
+                            new("tamper <messageID>", "Simulate message tampering attack")
+                    }),
+
+                ["add"] = new CommandDescriptor(
+                    "add", 
+                    parsed => new AddNewUserCommand(_context, parsed), 
+                    new List<CommandHelpEntry>()
+                    {
+                            new("add <userID>", "Add new user")
+                    }),
+                
+                ["deleteMessage"] = new CommandDescriptor(
+                    "delete", 
+                    parsed => new DeleteMessageCommand(_context, parsed), 
+                    new List<CommandHelpEntry>()
+                    {
+                        new("delete <messageID>", "Delete message")
                     })
             };
         }

@@ -1,17 +1,20 @@
 using System.Security.Cryptography;
 using System.Text;
 using CSaP.CourseProject.DataModel;
+using CSaP.CourseProject.Shell.Parsing;
 
 namespace CSaP.CourseProject.Shell.Commands
 {
     public sealed class SendCommand : ICommand
     {
         private readonly ApplicationContext _context;
+        private readonly ParsedCommand _parsed;
 
 
-        public SendCommand(ApplicationContext context)
+        public SendCommand(ApplicationContext context, ParsedCommand parsed)
         {
             _context = context;
+            _parsed = parsed;
         }
 
 
@@ -20,66 +23,38 @@ namespace CSaP.CourseProject.Shell.Commands
             Console.Write("Message ID: ");
             string? messageID = Console.ReadLine();
 
-            messageID = ValidateMessageId(messageID);
-
             Console.Write("Sender ID: ");
             string? senderID = Console.ReadLine();
 
-            senderID = ValidateSenderID(senderID);
-
             Console.Write("Message: ");
-            string messageText = Console.ReadLine() ?? " ";
+            string? text = Console.ReadLine();
 
-            IUser sender = _context.Users.GetUser(senderID);
-            byte[] data = Encoding.UTF8.GetBytes(messageText);
+            ValidateInput(messageID, senderID, text);
+
+            IUser sender = _context.Users.Get(senderID!);
+
+            byte[] data = Encoding.UTF8.GetBytes(text!);
+            
             byte[] signature = sender.Sign(data);
 
-            SignedMessage message = new SignedMessage(messageID, sender.UserID, messageText, signature, DateTime.UtcNow);
+            SignedMessage message = new SignedMessage(messageID!, sender.UserID, text!, signature, DateTime.UtcNow);
 
             _context.Messages.Add(message);
 
-            Console.WriteLine("Message signed and stored");
+            Console.WriteLine("Message signed and stored\n");
         }
 
-        private string ValidateMessageId(string? messageID)
+        private void ValidateInput(string? messageID, string? senderID, string? text)
         {
-            if (string.IsNullOrWhiteSpace(messageID)) throw new ArgumentException("MessageID cannot be null or empty.");
+            if (string.IsNullOrWhiteSpace(messageID)) throw new FormatException("Invalid message ID");
 
-            if (!_context.Messages.Exists(messageID)) return messageID;
-            else
-            {
-                string newID;
+            if (_context.Messages.Exists(messageID)) throw new InvalidOperationException("Message already exists");
 
-                do
-                {
-                    byte[] random = RandomNumberGenerator.GetBytes(32);
+            if (string.IsNullOrWhiteSpace(senderID)) throw new FormatException("Invalid sender");
 
-                    byte[] hash = SHA3_256.HashData(random);
+            if (!_context.Users.Exists(senderID)) throw new InvalidOperationException("Sender not found");
 
-                    newID = GetShortSHA3Hash(hash);
-                }
-                while (_context.Messages.Exists(newID));
-                
-                Console.WriteLine($"\n Provided messageID is already exists. Your messageID has been replaced with \"{newID}\"");
-
-                return newID;
-            }
-        }
-        
-        private string ValidateSenderID(string? senderID)
-        {
-            if (string.IsNullOrWhiteSpace(senderID)) throw new ArgumentException("SenderID cannot be null or empty.");
-
-            if (!_context.Users.Exists(senderID)) throw new ArgumentException($"Sender \"{senderID}\" doen't exist.");
-
-            return senderID;
-        }
-
-        private string GetShortSHA3Hash(byte[] hash, int length = 8)
-        {
-            string hex = Convert.ToHexString(hash).ToLowerInvariant();
-
-            return hex.Substring(0, length);
+            if (string.IsNullOrWhiteSpace(text)) throw new FormatException("Message is empty");
         }
     }
 }

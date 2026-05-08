@@ -56,13 +56,18 @@ namespace CSaP.CourseProject.DataModel
             return ReadAll().Any(u => u.UserID == userID);
         }
 
-        public User GetUser(string userID)
+        public User Get(string userID)
         {
             UserRecord record = ReadAll().First(u => u.UserID == userID);
 
             User user = ToUser(record);
 
             return user;
+        }
+
+        public IEnumerable<IUser> GetAll()
+        {
+            return ReadAll().Select(ToUser);
         }
 
         public void Add(User user)
@@ -81,9 +86,13 @@ namespace CSaP.CourseProject.DataModel
             SaveAll(users);
         }
 
-        public IEnumerable<IUser> GetAllUsers()
+        public void Delete(string userID)
         {
-            return ReadAll().Select(ToUser);
+            List<UserRecord> records = ReadAll();
+
+            records.RemoveAll(x => x.UserID == userID);
+
+            SaveAll(records);
         }
 
         private List<UserRecord> ReadAll()

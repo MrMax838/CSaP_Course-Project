@@ -12,13 +12,7 @@ namespace CSaP.CourseProject.DataModel
         public string MessageID { get { return _messageID; } }
         public string SenderID { get { return _senderID; } }
         public string Message { get { return _message; } }
-        public byte[] Signature
-        {
-            get
-            {
-                return (byte[])_signature.Clone();
-            }
-        }
+        public byte[] Signature { get { return _signature.ToArray(); } }
         public DateTime Timestamp { get { return _timestamp; } }
 
 
@@ -29,7 +23,7 @@ namespace CSaP.CourseProject.DataModel
             _messageID = messageID;
             _senderID = senderID;
             _message = message;
-            _signature = signature;
+            _signature = signature.ToArray();
             _timestamp = timestamp;
         }
     }

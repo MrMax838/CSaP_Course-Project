@@ -161,3 +161,9 @@ exit
 
 message modified
 signature old
+
+20. Але:
+
+пізніше можна додати:
+
+send --auto-id

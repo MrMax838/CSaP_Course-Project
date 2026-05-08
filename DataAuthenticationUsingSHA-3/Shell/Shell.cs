@@ -8,30 +8,28 @@ namespace CSaP.CourseProject.Shell
         private Parser _parser;
         private CommandHandler _commandHandler;
 
+        private bool _isRunning;
 
-        private Shell(Parser parser, CommandHandler commandHandler)
+
+        private Shell(Parser parser, ApplicationContext context)
         {
             _parser = parser;
-            _commandHandler = commandHandler;
+            _commandHandler = new CommandHandler(context, this);
         }
 
 
         public static Shell Create(ApplicationContext context)
         {
             Parser parser = new();
-            CommandHandler commandHandler = new(context);
 
-            return new Shell(parser, commandHandler);
-        }
-
-        public static Shell Create(Parser parser, CommandHandler commandHandler)
-        {
-            return new Shell(parser, commandHandler);
+            return new Shell(parser, context);
         }
 
         public void Start()
         {
-            while (true)
+            _isRunning = true;
+
+            while (_isRunning)
             {
                 Console.Write("> ");
 
@@ -50,6 +48,11 @@ namespace CSaP.CourseProject.Shell
                     Console.WriteLine(ex.Message);
                 }
             }
+        }
+
+        public void Stop()
+        {
+            _isRunning = false;
         }
     }
 }

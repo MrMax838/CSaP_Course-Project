@@ -41,7 +41,7 @@ namespace CSaP.CourseProject.DataModel
         {
             byte[] signature = _wrapper.Sign(message);
 
-            return new SignedMessage(messageID, _userID, message, signature, DateTime.Now);
+            return new SignedMessage(messageID, _userID, message, signature, DateTime.UtcNow);
         }
     }
 }
