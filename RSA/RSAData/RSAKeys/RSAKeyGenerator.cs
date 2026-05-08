@@ -3,20 +3,20 @@ using DiscreteMath.BigIntegers.NumberTheory;
 
 namespace CSaP.CourseProject.RSA
 {
-    public sealed class RSAKeyGenerator
+    internal sealed class RSAKeyGenerator
     {
         private readonly PrimeGenerator _primeGenerator;
         private readonly ModularArithmetic _math;
 
         private static readonly BigInteger _defaultE = 65537;
 
-        public RSAKeyGenerator(PrimeGenerator primeGenerator, ModularArithmetic math)
+        internal RSAKeyGenerator(PrimeGenerator primeGenerator, ModularArithmetic math)
         {
             _primeGenerator = primeGenerator;
             _math = math;
         }
 
-        public RSAKeyPair GenerateKeyPair(int keySizeBits)
+        internal RSAKeyPair GenerateKeyPair(int keySizeBits)
         {
             int primeBits = keySizeBits / 2;
 
@@ -40,24 +40,25 @@ namespace CSaP.CourseProject.RSA
 
             BigInteger d = _math.ModInverse(e, phi);
 
-            BigInteger dp = d % (p - 1);
-            BigInteger dq = d % (q - 1);
-            BigInteger qInv = _math.ModInverse(q, p);
-
             return new RSAKeyPair
             {
                 Module = n,
                 Exponent = e,
-                PrivateExponent = d,
-                P = p,
-                Q = q,
-                DP = dp,
-                DQ = dq,
-                QInv = qInv
+                PrivateExponent = d
             };
         }
 
-        public static int GetModuleByteSize(BigInteger module)
+        internal RSAKeyPair GenerateKeyPair(RSAData rsaData)
+        {
+            return new RSAKeyPair
+            {
+                Module = rsaData.Module,
+                Exponent = rsaData.PublicExponent,
+                PrivateExponent = rsaData.PrivateExponent
+            };
+        }
+
+        internal static int GetModuleByteSize(BigInteger module)
         {
             return (int)((module.GetBitLength() + 7) / 8);
         }

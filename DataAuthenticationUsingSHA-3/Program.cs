@@ -1,2 +1,19 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿namespace CSaP.CourseProject;
+
+class Program
+{
+    static void Main()
+    {
+        while (true)
+        {
+            Console.Write("> ");
+
+            string? input = Console.ReadLine();
+
+            if (string.IsNullOrWhiteSpace(input))
+                continue;
+
+            //CommandHandler.Execute(input);
+        }
+    }
+}

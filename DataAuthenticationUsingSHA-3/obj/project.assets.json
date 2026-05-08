@@ -1,11 +1,48 @@
 {
   "version": 3,
   "targets": {
-    "net9.0": {}
+    "net9.0": {
+      "DiscreteMathLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/DiscreteMathLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DiscreteMathLibrary.dll": {}
+        }
+      },
+      "RSA/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "DiscreteMathLibrary": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RSA.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RSA.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "DiscreteMathLibrary/1.0.0": {
+      "type": "project",
+      "path": "../../../Лаби/Code/Libraries/DiscreteMathLibrary/DiscreteMathLibrary.csproj",
+      "msbuildProject": "../../../Лаби/Code/Libraries/DiscreteMathLibrary/DiscreteMathLibrary.csproj"
+    },
+    "RSA/1.0.0": {
+      "type": "project",
+      "path": "../RSA/RSA.csproj",
+      "msbuildProject": "../RSA/RSA.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net9.0": []
+    "net9.0": [
+      "RSA >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\MrMax\\.nuget\\packages\\": {},
@@ -39,7 +76,11 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\University\\3 курс\\КСтП +КП\\Курсова робота\\Code\\RSA\\RSA.csproj": {
+              "projectPath": "D:\\University\\3 курс\\КСтП +КП\\Курсова робота\\Code\\RSA\\RSA.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

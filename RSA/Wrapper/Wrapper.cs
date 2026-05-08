@@ -27,5 +27,24 @@ namespace CSaP.CourseProject.RSA
         {
             return _rsa.Sign(Encoding.UTF8.GetBytes(text));
         }
+
+        public bool Verify(string text, byte[] signature)
+        {
+            return _rsa.Verify(Encoding.UTF8.GetBytes(text), signature);
+        }
+
+        public byte[] SignFile(string path)
+        {
+            byte[] data = File.ReadAllBytes(path);
+
+            return _rsa.Sign(data);
+        }
+
+        public bool VerifyFile(string path, byte[] signature)
+        {
+            byte[] data = File.ReadAllBytes(path);
+
+            return _rsa.Verify(data, signature);
+        }
     }
 }

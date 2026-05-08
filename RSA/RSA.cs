@@ -27,6 +27,25 @@ namespace CSaP.CourseProject.RSA
             return new RSA(new RSAPublicKey() { Exponent = keyPair.Exponent, Module = keyPair.Module }, keyPair);
         }
 
+        public static RSA Import(RSAData rsaData)
+        {
+            var keyGenerator = new RSAKeyGenerator(new(), new());
+
+            RSAKeyPair keyPair = keyGenerator.GenerateKeyPair(rsaData);
+
+            return new RSA(new RSAPublicKey() { Exponent = rsaData.PublicExponent, Module = rsaData.Module }, keyPair);
+        }
+
+        public RSAData Export()
+        {
+            return new RSAData
+            {
+                PublicExponent = _publicKey.Exponent,
+                PrivateExponent = _privateKey.PrivateExponent,
+                Module = _privateKey.Module
+            };
+        }
+
         public byte[] Encrypt(byte[] data)
         {
             if (data == null) throw new ArgumentNullException(nameof(data));

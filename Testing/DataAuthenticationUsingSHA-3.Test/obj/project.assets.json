@@ -415,11 +415,37 @@
       "DataAuthenticationUsingSHA-3/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "RSA": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/DataAuthenticationUsingSHA-3.dll": {}
         },
         "runtime": {
           "bin/placeholder/DataAuthenticationUsingSHA-3.dll": {}
+        }
+      },
+      "DiscreteMathLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/DiscreteMathLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DiscreteMathLibrary.dll": {}
+        }
+      },
+      "RSA/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "DiscreteMathLibrary": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RSA.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RSA.dll": {}
         }
       }
     }
@@ -947,6 +973,16 @@
       "type": "project",
       "path": "../../DataAuthenticationUsingSHA-3/DataAuthenticationUsingSHA-3.csproj",
       "msbuildProject": "../../DataAuthenticationUsingSHA-3/DataAuthenticationUsingSHA-3.csproj"
+    },
+    "DiscreteMathLibrary/1.0.0": {
+      "type": "project",
+      "path": "../../../../Лаби/Code/Libraries/DiscreteMathLibrary/DiscreteMathLibrary.csproj",
+      "msbuildProject": "../../../../Лаби/Code/Libraries/DiscreteMathLibrary/DiscreteMathLibrary.csproj"
+    },
+    "RSA/1.0.0": {
+      "type": "project",
+      "path": "../../RSA/RSA.csproj",
+      "msbuildProject": "../../RSA/RSA.csproj"
     }
   },
   "projectFileDependencyGroups": {
