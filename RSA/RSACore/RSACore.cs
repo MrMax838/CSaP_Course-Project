@@ -1,10 +1,10 @@
 using System.Numerics;
 
-namespace CSaP.CourseProject.RSA
+namespace CSaP.CourseProject.RSA.Core
 {
-    public static class RSACore
+    internal static class RSACore
     {
-        public static BigInteger Apply(BigInteger data, BigInteger exponent, BigInteger module)
+        internal static BigInteger Apply(BigInteger data, BigInteger exponent, BigInteger module)
         {
             ValidateParameters(data, exponent, module);
 

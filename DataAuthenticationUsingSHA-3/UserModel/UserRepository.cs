@@ -1,12 +1,12 @@
 using System.Numerics;
 using System.Text.Json;
-using CSaP.CourseProject.RSA;
+using CSaP.CourseProject.RSA.Key;
 
 namespace CSaP.CourseProject.DataModel
 {
     public class UserRepository
     {
-        private string _path = @"D:\University\3 курс\КСтП +КП\Курсова робота\Code\DataAuthenticationUsingSHA-3\IOData\Users.json";
+        private string _path = @"D:\University\3 курс\КСтП +КП\Курсовий проєкт\Code\DataAuthenticationUsingSHA-3\IOData\Users.json";
 
 
         public UserRepository() {}

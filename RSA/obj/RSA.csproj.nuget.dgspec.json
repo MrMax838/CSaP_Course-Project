@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\University\\3 курс\\КСтП +КП\\Курсова робота\\Code\\RSA\\RSA.csproj": {}
+    "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\RSA\\RSA.csproj": {}
   },
   "projects": {
-    "D:\\University\\3 курс\\КСтП +КП\\Курсова робота\\Code\\RSA\\RSA.csproj": {
+    "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\RSA\\RSA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\University\\3 курс\\КСтП +КП\\Курсова робота\\Code\\RSA\\RSA.csproj",
+        "projectUniqueName": "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\RSA\\RSA.csproj",
         "projectName": "RSA",
-        "projectPath": "D:\\University\\3 курс\\КСтП +КП\\Курсова робота\\Code\\RSA\\RSA.csproj",
+        "projectPath": "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\RSA\\RSA.csproj",
         "packagesPath": "C:\\Users\\MrMax\\.nuget\\packages\\",
-        "outputPath": "D:\\University\\3 курс\\КСтП +КП\\Курсова робота\\Code\\RSA\\obj\\",
+        "outputPath": "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\RSA\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -70,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.313/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.314/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -136,7 +136,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.313/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.314/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

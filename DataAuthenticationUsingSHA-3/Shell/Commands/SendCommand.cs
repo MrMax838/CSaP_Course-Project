@@ -9,6 +9,16 @@ namespace CSaP.CourseProject.Shell.Commands
     {
         private readonly ApplicationContext _context;
         private readonly ParsedCommand _parsed;
+        private readonly CommandDescription _description = new CommandDescription(
+            "send",
+            new List<CommandHelpEntry>()
+            {
+                    new("send", "Create and sign message")
+            }
+        );
+
+
+        public CommandDescription Description => _description;
 
 
         public SendCommand(ApplicationContext context, ParsedCommand parsed)
@@ -20,6 +30,8 @@ namespace CSaP.CourseProject.Shell.Commands
 
         public void Execute()
         {
+            bool isExtended = _parsed.Flags.Contains("--extended");
+
             Console.Write("Message ID: ");
             string? messageID = Console.ReadLine();
 
@@ -41,20 +53,36 @@ namespace CSaP.CourseProject.Shell.Commands
 
             _context.Messages.Add(message);
 
-            Console.WriteLine("Message signed and stored\n");
+            if (isExtended)
+            {
+                Console.WriteLine(
+                    $"""
+
+                    Calculated SHA3(message):
+                    {Convert.ToHexString(SHA3_256.HashData(data))}
+                    
+                    Message successfully signed and stored
+                    
+                    """
+                );
+            }
+            else
+            {
+                Console.WriteLine("Message signed and stored\n");
+            }
         }
 
         private void ValidateInput(string? messageID, string? senderID, string? text)
         {
-            if (string.IsNullOrWhiteSpace(messageID)) throw new FormatException("Invalid message ID");
+            if (string.IsNullOrWhiteSpace(messageID)) throw new FormatException("Invalid message ID\n");
 
-            if (_context.Messages.Exists(messageID)) throw new InvalidOperationException("Message already exists");
+            if (_context.Messages.Exists(messageID)) throw new InvalidOperationException("Message already exists\n");
 
-            if (string.IsNullOrWhiteSpace(senderID)) throw new FormatException("Invalid sender");
+            if (string.IsNullOrWhiteSpace(senderID)) throw new FormatException("Invalid sender\n");
 
-            if (!_context.Users.Exists(senderID)) throw new InvalidOperationException("Sender not found");
+            if (!_context.Users.Exists(senderID)) throw new InvalidOperationException("Sender not found\n");
 
-            if (string.IsNullOrWhiteSpace(text)) throw new FormatException("Message is empty");
+            if (string.IsNullOrWhiteSpace(text)) throw new FormatException("Message is empty\n");
         }
     }
 }

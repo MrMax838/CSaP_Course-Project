@@ -6,7 +6,7 @@ namespace CSaP.CourseProject.Shell.Parsing
         {
             string[] parts = input.Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
-            if (parts.Length == 0) throw new FormatException("Command is empty");
+            if (parts.Length == 0) throw new FormatException("Command is empty\n");
 
             string name = parts[0];
             List<string> arguments = new();

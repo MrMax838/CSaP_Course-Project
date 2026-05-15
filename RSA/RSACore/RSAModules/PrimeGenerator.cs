@@ -1,10 +1,10 @@
 using System.Numerics;
 using DiscreteMath.BigIntegers.Primes;
 
-namespace CSaP.CourseProject.RSA
+namespace CSaP.CourseProject.RSA.Core
 {
-    public sealed class PrimeGenerator// : IPrimeGenerator
+    internal sealed class PrimeGenerator
     {
-        public BigInteger GeneratePrime(int bitLength) => Primes.GeneratePrime(bitLength);
+        internal BigInteger GeneratePrime(int bitLength) => Primes.GeneratePrime(bitLength);
     }   
 }

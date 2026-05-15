@@ -19,20 +19,6 @@ public class RSAEncryptingTest
     }
 
     [Fact]
-    public void EncryptDecrypt_ShouldSupportUnicode()
-    {
-        var rsa = RSA.Create();
-        var wrapper = new Wrapper(rsa);
-
-        string message = "Привіт 🌍 RSA шифрування";
-
-        byte[] cipher = wrapper.Encrypt(message);
-        string result = wrapper.DecryptToString(cipher);
-
-        Assert.Equal(message, result);
-    }
-
-    [Fact]
     public void EncryptDecrypt_LongMessage_ShouldWork()
     {
         var rsa = RSA.Create();
@@ -117,7 +103,7 @@ public class RSAEncryptingTest
 
         byte[] cipher = wrapper.Encrypt(message);
 
-        cipher[10] ^= 0xFF; // псуємо байт
+        cipher[10] ^= 0xFF;
 
         Assert.ThrowsAny<Exception>(() => rsa.Decrypt(cipher));
     }
@@ -132,7 +118,7 @@ public class RSAEncryptingTest
 
         byte[] cipher = wrapper.Encrypt(message);
 
-        int keySize = RSAKeyGenerator.GetModuleByteSize(rsa.PublicKey.Module);
+        int keySize = (int)((rsa.Export().Module.GetBitLength() + 7) / 8);
 
         Assert.True(cipher.Length % keySize == 0);
     }

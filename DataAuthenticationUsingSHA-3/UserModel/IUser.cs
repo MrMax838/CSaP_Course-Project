@@ -1,4 +1,4 @@
-using CSaP.CourseProject.RSA;
+using CSaP.CourseProject.RSA.Key;
 
 namespace CSaP.CourseProject.DataModel
 {

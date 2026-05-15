@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\University\\3 курс\\КСтП +КП\\Курсова робота\\Code\\Testing\\DataAuthenticationUsingSHA-3.Test\\DataAuthenticationUsingSHA-3.Test.csproj": {}
+    "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\Testing\\DataAuthenticationUsingSHA-3.Test\\DataAuthenticationUsingSHA-3.Test.csproj": {}
   },
   "projects": {
-    "D:\\University\\3 курс\\КСтП +КП\\Курсова робота\\Code\\DataAuthenticationUsingSHA-3\\DataAuthenticationUsingSHA-3.csproj": {
+    "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\DataAuthenticationUsingSHA-3\\DataAuthenticationUsingSHA-3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\University\\3 курс\\КСтП +КП\\Курсова робота\\Code\\DataAuthenticationUsingSHA-3\\DataAuthenticationUsingSHA-3.csproj",
+        "projectUniqueName": "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\DataAuthenticationUsingSHA-3\\DataAuthenticationUsingSHA-3.csproj",
         "projectName": "DataAuthenticationUsingSHA-3",
-        "projectPath": "D:\\University\\3 курс\\КСтП +КП\\Курсова робота\\Code\\DataAuthenticationUsingSHA-3\\DataAuthenticationUsingSHA-3.csproj",
+        "projectPath": "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\DataAuthenticationUsingSHA-3\\DataAuthenticationUsingSHA-3.csproj",
         "packagesPath": "C:\\Users\\MrMax\\.nuget\\packages\\",
-        "outputPath": "D:\\University\\3 курс\\КСтП +КП\\Курсова робота\\Code\\DataAuthenticationUsingSHA-3\\obj\\",
+        "outputPath": "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\DataAuthenticationUsingSHA-3\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "D:\\University\\3 курс\\КСтП +КП\\Курсова робота\\Code\\RSA\\RSA.csproj": {
-                "projectPath": "D:\\University\\3 курс\\КСтП +КП\\Курсова робота\\Code\\RSA\\RSA.csproj"
+              "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\RSA\\RSA.csproj": {
+                "projectPath": "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\RSA\\RSA.csproj"
               }
             }
           }
@@ -70,18 +70,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.313/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.314/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\University\\3 курс\\КСтП +КП\\Курсова робота\\Code\\RSA\\RSA.csproj": {
+    "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\RSA\\RSA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\University\\3 курс\\КСтП +КП\\Курсова робота\\Code\\RSA\\RSA.csproj",
+        "projectUniqueName": "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\RSA\\RSA.csproj",
         "projectName": "RSA",
-        "projectPath": "D:\\University\\3 курс\\КСтП +КП\\Курсова робота\\Code\\RSA\\RSA.csproj",
+        "projectPath": "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\RSA\\RSA.csproj",
         "packagesPath": "C:\\Users\\MrMax\\.nuget\\packages\\",
-        "outputPath": "D:\\University\\3 курс\\КСтП +КП\\Курсова робота\\Code\\RSA\\obj\\",
+        "outputPath": "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\RSA\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -140,18 +140,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.313/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.314/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\University\\3 курс\\КСтП +КП\\Курсова робота\\Code\\Testing\\DataAuthenticationUsingSHA-3.Test\\DataAuthenticationUsingSHA-3.Test.csproj": {
+    "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\Testing\\DataAuthenticationUsingSHA-3.Test\\DataAuthenticationUsingSHA-3.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\University\\3 курс\\КСтП +КП\\Курсова робота\\Code\\Testing\\DataAuthenticationUsingSHA-3.Test\\DataAuthenticationUsingSHA-3.Test.csproj",
+        "projectUniqueName": "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\Testing\\DataAuthenticationUsingSHA-3.Test\\DataAuthenticationUsingSHA-3.Test.csproj",
         "projectName": "DataAuthenticationUsingSHA-3.Test",
-        "projectPath": "D:\\University\\3 курс\\КСтП +КП\\Курсова робота\\Code\\Testing\\DataAuthenticationUsingSHA-3.Test\\DataAuthenticationUsingSHA-3.Test.csproj",
+        "projectPath": "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\Testing\\DataAuthenticationUsingSHA-3.Test\\DataAuthenticationUsingSHA-3.Test.csproj",
         "packagesPath": "C:\\Users\\MrMax\\.nuget\\packages\\",
-        "outputPath": "D:\\University\\3 курс\\КСтП +КП\\Курсова робота\\Code\\Testing\\DataAuthenticationUsingSHA-3.Test\\obj\\",
+        "outputPath": "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\Testing\\DataAuthenticationUsingSHA-3.Test\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -173,8 +173,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "D:\\University\\3 курс\\КСтП +КП\\Курсова робота\\Code\\DataAuthenticationUsingSHA-3\\DataAuthenticationUsingSHA-3.csproj": {
-                "projectPath": "D:\\University\\3 курс\\КСтП +КП\\Курсова робота\\Code\\DataAuthenticationUsingSHA-3\\DataAuthenticationUsingSHA-3.csproj"
+              "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\DataAuthenticationUsingSHA-3\\DataAuthenticationUsingSHA-3.csproj": {
+                "projectPath": "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\DataAuthenticationUsingSHA-3\\DataAuthenticationUsingSHA-3.csproj"
               }
             }
           }
@@ -228,7 +228,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.313/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.314/PortableRuntimeIdentifierGraph.json"
         }
       }
     },

@@ -7,6 +7,17 @@ namespace CSaP.CourseProject.Shell.Commands
     {
         private readonly ParsedCommand _parsed;
         private readonly MessageVerifier _verifier;
+        private readonly CommandDescription _description = new CommandDescription(
+            "verify",
+            new List<CommandHelpEntry>()
+            {
+                    new("verify <messageID>", "Verify message signature"),
+                    new("verify <messageID> --extended", "Show detailed verification process")
+            }
+        );
+
+
+        public CommandDescription Description => _description;
 
 
         public VerifyCommand(ParsedCommand parsed, MessageVerifier verifier)
@@ -38,31 +49,27 @@ namespace CSaP.CourseProject.Shell.Commands
 
         private void PrintSimple(VerificationResult result)
         {
-            Console.WriteLine(result.IsValid ? "VALID" : "INVALID");
+            Console.WriteLine(result.IsValid ? "VALID\n" : "INVALID\n");
         }
 
         private void PrintExtended(VerificationResult result)
         {
-            Console.WriteLine(
-            $"""
-            Message ID:
-            {result.MessageID}
+            Console.WriteLine( 
+                $"""
+                Message ID: {result.MessageID}
+                Sender: {result.SenderID}
+                Timestamp: {result.Timestamp}
+                
+                SHA3(message): 
+                {Convert.ToHexString(result.MessageHash)}
 
-            Sender:
-            {result.SenderID}
-
-            Timestamp:
-            {result.Timestamp:u}
-
-            SHA3(message):
-            {Convert.ToHexString(result.MessageHash)}
-
-            Signature:
-            {Convert.ToHexString(result.Signature)}
-
-            Verification:
-            {(result.IsValid ? "VALID" : "INVALID")}
-            """);
+                Signature:
+                {Convert.ToHexString(result.Signature)}
+                
+                Verification: {(result.IsValid ? "VALID" : "INVALID")}
+                
+                """
+            );
         }
     }
 }

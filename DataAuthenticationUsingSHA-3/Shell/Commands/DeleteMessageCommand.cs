@@ -6,6 +6,16 @@ namespace CSaP.CourseProject.Shell.Commands
     {
         private readonly ApplicationContext _context;
         private readonly ParsedCommand _parsed;
+        private readonly CommandDescription _description = new CommandDescription(
+            "delete",
+            new List<CommandHelpEntry>()
+            {
+                new("delete <messageID>", "Delete message")
+            }
+        );
+
+
+        public CommandDescription Description => _description;
 
 
         public DeleteMessageCommand(ApplicationContext context, ParsedCommand parsed)
@@ -25,7 +35,7 @@ namespace CSaP.CourseProject.Shell.Commands
 
             _context.Messages.Delete(messageID);
 
-            Console.WriteLine("Message deleted successfully");
+            Console.WriteLine("Message successfully deleted\n");
         }
     }
 }

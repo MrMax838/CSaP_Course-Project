@@ -1,30 +1,23 @@
 [
   {
-    "MessageID": "msg1",
-    "SenderID": "Bob",
-    "Message": "Hello world",
-    "Signature": "czlVWCjQ08iEA29WJzf1MlmDLtvuOWe6JoPHIvsAaxx/6qWJq4nfqQ5eSQJt\u002BXq9BhLS7mysKH2LuCUgzu7Ge5iSX2\u002BzrPGkkPkP\u002BU9f0GG4jZN2bcsGR7Wma11ns6zcnbfHwVgJe7Oi8cbtx5OP/AjbyrkCBhPVlEy3hIRuk7k=",
-    "Timestamp": "2026-05-08T23:15:58.4300651Z"
-  },
-  {
-    "MessageID": "msg1-tampered",
-    "SenderID": "Bob",
-    "Message": "blabla",
-    "Signature": "czlVWCjQ08iEA29WJzf1MlmDLtvuOWe6JoPHIvsAaxx/6qWJq4nfqQ5eSQJt\u002BXq9BhLS7mysKH2LuCUgzu7Ge5iSX2\u002BzrPGkkPkP\u002BU9f0GG4jZN2bcsGR7Wma11ns6zcnbfHwVgJe7Oi8cbtx5OP/AjbyrkCBhPVlEy3hIRuk7k=",
-    "Timestamp": "2026-05-08T23:16:19.1522596Z"
-  },
-  {
-    "MessageID": "msg1-sender",
+    "MessageID": "message_from_Alice_to_Bob",
     "SenderID": "Alice",
-    "Message": "Hello world",
-    "Signature": "czlVWCjQ08iEA29WJzf1MlmDLtvuOWe6JoPHIvsAaxx/6qWJq4nfqQ5eSQJt\u002BXq9BhLS7mysKH2LuCUgzu7Ge5iSX2\u002BzrPGkkPkP\u002BU9f0GG4jZN2bcsGR7Wma11ns6zcnbfHwVgJe7Oi8cbtx5OP/AjbyrkCBhPVlEy3hIRuk7k=",
-    "Timestamp": "2026-05-08T23:16:51.3679201Z"
+    "Message": "Hello Bob!",
+    "Signature": "Kx2VZIA5cTIC3VI44MzgGxG3nTSosW7RWBBQfOORyVdF/oUr3tQAtnXlaUUdofR/oclWzrwKvNIAhBGHVIDOx4itEiXWUC1daWUmWWnlITL271MbTRp7NkDQB\u002BIALjqCV1332vLVpnthVpuNr\u002BXEjE9cyR\u002BntlXO4mFHJaqzqQ8=",
+    "Timestamp": "2026-05-15T18:10:48.28133Z"
   },
   {
-    "MessageID": "msg1-full",
+    "MessageID": "message_from_Alice_to_Bob-tampered_content",
+    "SenderID": "Alice",
+    "Message": "Hello Bob! Actually you owe me one quadrillion money",
+    "Signature": "Kx2VZIA5cTIC3VI44MzgGxG3nTSosW7RWBBQfOORyVdF/oUr3tQAtnXlaUUdofR/oclWzrwKvNIAhBGHVIDOx4itEiXWUC1daWUmWWnlITL271MbTRp7NkDQB\u002BIALjqCV1332vLVpnthVpuNr\u002BXEjE9cyR\u002BntlXO4mFHJaqzqQ8=",
+    "Timestamp": "2026-05-15T18:39:30.8674823Z"
+  },
+  {
+    "MessageID": "message_from_Alice_to_Bob-tampered_sender_keys",
     "SenderID": "Eva",
-    "Message": "yapee",
-    "Signature": "czlVWCjQ08iEA29WJzf1MlmDLtvuOWe6JoPHIvsAaxx/6qWJq4nfqQ5eSQJt\u002BXq9BhLS7mysKH2LuCUgzu7Ge5iSX2\u002BzrPGkkPkP\u002BU9f0GG4jZN2bcsGR7Wma11ns6zcnbfHwVgJe7Oi8cbtx5OP/AjbyrkCBhPVlEy3hIRuk7k=",
-    "Timestamp": "2026-05-08T23:17:23.2436416Z"
+    "Message": "Hello Bob!",
+    "Signature": "Kx2VZIA5cTIC3VI44MzgGxG3nTSosW7RWBBQfOORyVdF/oUr3tQAtnXlaUUdofR/oclWzrwKvNIAhBGHVIDOx4itEiXWUC1daWUmWWnlITL271MbTRp7NkDQB\u002BIALjqCV1332vLVpnthVpuNr\u002BXEjE9cyR\u002BntlXO4mFHJaqzqQ8=",
+    "Timestamp": "2026-05-15T18:48:12.9852686Z"
   }
 ]

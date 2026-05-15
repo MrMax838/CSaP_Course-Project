@@ -104,3 +104,10 @@ D:\University\3 курс\КСтП +КП\Курсова робота\Code\Testing
 D:\University\3 курс\КСтП +КП\Курсова робота\Code\Testing\DataAuthenticationUsingSHA-3.Test\obj\Debug\net9.0\DataAuthenticationUsingSHA-3.Test.pdb
 D:\University\3 курс\КСтП +КП\Курсова робота\Code\Testing\DataAuthenticationUsingSHA-3.Test\obj\Debug\net9.0\DataAuthenticationUsingSHA-3.Test.genruntimeconfig.cache
 D:\University\3 курс\КСтП +КП\Курсова робота\Code\Testing\DataAuthenticationUsingSHA-3.Test\obj\Debug\net9.0\ref\DataAuthenticationUsingSHA-3.Test.dll
+d:\University\3 курс\КСтП +КП\Курсова робота\Code\Testing\DataAuthenticationUsingSHA-3.Test\bin\Debug\net9.0\RSA.deps.json
+d:\University\3 курс\КСтП +КП\Курсова робота\Code\Testing\DataAuthenticationUsingSHA-3.Test\bin\Debug\net9.0\RSA.runtimeconfig.json
+d:\University\3 курс\КСтП +КП\Курсова робота\Code\Testing\DataAuthenticationUsingSHA-3.Test\bin\Debug\net9.0\RSA.exe
+d:\University\3 курс\КСтП +КП\Курсова робота\Code\Testing\DataAuthenticationUsingSHA-3.Test\bin\Debug\net9.0\DiscreteMathLibrary.dll
+d:\University\3 курс\КСтП +КП\Курсова робота\Code\Testing\DataAuthenticationUsingSHA-3.Test\bin\Debug\net9.0\RSA.dll
+d:\University\3 курс\КСтП +КП\Курсова робота\Code\Testing\DataAuthenticationUsingSHA-3.Test\bin\Debug\net9.0\RSA.pdb
+d:\University\3 курс\КСтП +КП\Курсова робота\Code\Testing\DataAuthenticationUsingSHA-3.Test\bin\Debug\net9.0\DiscreteMathLibrary.pdb

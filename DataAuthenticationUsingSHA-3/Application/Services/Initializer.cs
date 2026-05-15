@@ -6,8 +6,8 @@ namespace CSaP.CourseProject.Service
     {
         public static ApplicationContext Initialize(
             int rsaKeySiza = 1024, 
-            string userPath = @"D:\University\3 курс\КСтП +КП\Курсова робота\Code\DataAuthenticationUsingSHA-3\IOData\Users.json", 
-            string messagePath = @"D:\University\3 курс\КСтП +КП\Курсова робота\Code\DataAuthenticationUsingSHA-3\IOData\Messages.json", 
+            string userPath = @"D:\University\3 курс\КСтП +КП\Курсовий проєкт\Code\DataAuthenticationUsingSHA-3\IOData\Users.json", 
+            string messagePath = @"D:\University\3 курс\КСтП +КП\Курсовий проєкт\Code\DataAuthenticationUsingSHA-3\IOData\Messages.json", 
             bool cleanInitialization = true)
         {
             UserRepository users = new();
@@ -15,16 +15,29 @@ namespace CSaP.CourseProject.Service
 
             if (cleanInitialization)
             {
-                EnsureFileInitialized(userPath);
-                EnsureFileInitialized(messagePath);
+                CleanFile(userPath);
+                CleanFile(messagePath);
 
                 AddStandartUsers(users, rsaKeySiza);
+            }
+            else
+            {
+                EnsureFileInitialized(userPath);
+                EnsureFileInitialized(messagePath);
             }
 
             return new(users, messages);
         }
 
         private static void EnsureFileInitialized(string path)
+        {
+            if (!File.Exists(path))
+            {
+                File.WriteAllText(path, "[]");                
+            }
+        }
+
+        private static void CleanFile(string path)
         {
             File.WriteAllText(path, "[]");
         }

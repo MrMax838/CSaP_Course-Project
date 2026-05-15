@@ -1,4 +1,3 @@
-using System.Text;
 using CSaP.CourseProject.DataModel;
 using CSaP.CourseProject.Service;
 using CSaP.CourseProject.Shell.Parsing;
@@ -10,6 +9,18 @@ namespace CSaP.CourseProject.Shell.Commands
         private readonly ApplicationContext _context;
         private readonly ParsedCommand _parsed;
         private readonly MessageTamper _tamperService;
+        private readonly CommandDescription _description = new CommandDescription(
+            "tamper",
+            new List<CommandHelpEntry>()
+            {
+                new("tamper <messageID>", "Simulate message tampering attack"),
+                new("tamper <messageID> --message", "Simulate message tampering attack"),
+                new("tamper <messageID> --sender", "Simulate sender tampering attack")
+            }
+        );
+
+
+        public CommandDescription Description => _description;
 
 
         public TamperCommand(ApplicationContext context, ParsedCommand parsed, MessageTamper tamperService)
@@ -59,15 +70,15 @@ namespace CSaP.CourseProject.Shell.Commands
 
         private void ValidateInput(string? messageID, string? senderID, string? text)
         {
-            if (string.IsNullOrWhiteSpace(messageID)) throw new FormatException("Invalid message ID");
+            if (string.IsNullOrWhiteSpace(messageID)) throw new FormatException("Invalid message ID\n");
 
-            if (_context.Messages.Exists(messageID)) throw new InvalidOperationException("Message already exists");
+            if (_context.Messages.Exists(messageID)) throw new InvalidOperationException("Message already exists\n");
 
-            if (string.IsNullOrWhiteSpace(senderID)) throw new FormatException("Invalid sender");
+            if (string.IsNullOrWhiteSpace(senderID)) throw new FormatException("Invalid sender\n");
 
-            if (!_context.Users.Exists(senderID)) throw new InvalidOperationException("Sender not found");
+            if (!_context.Users.Exists(senderID)) throw new InvalidOperationException("Sender not found\n");
 
-            if (string.IsNullOrWhiteSpace(text)) throw new FormatException("Message is empty");
+            if (string.IsNullOrWhiteSpace(text)) throw new FormatException("Message is empty\n");
         }
     }
 }

@@ -1,4 +1,9 @@
 using System.Numerics;
+using CSaP.CourseProject.RSA.Core;
+using CSaP.CourseProject.RSA.Key;
+using CSaP.CourseProject.RSA.Padding;
+using CSaP.CourseProject.RSA.Padding.OAEP;
+using CSaP.CourseProject.RSA.Padding.PSS;
 
 namespace CSaP.CourseProject.RSA
 {
@@ -6,9 +11,6 @@ namespace CSaP.CourseProject.RSA
     {
         private readonly RSAPublicKey _publicKey;
         private readonly RSAKeyPair _privateKey;
-
-
-        public RSAPublicKey PublicKey => _publicKey;
 
 
         private RSA(RSAPublicKey publicKey, RSAKeyPair privateKey)
@@ -51,14 +53,14 @@ namespace CSaP.CourseProject.RSA
             if (data == null) throw new ArgumentNullException(nameof(data));
 
             int moduleSize = RSAKeyGenerator.GetModuleByteSize(_publicKey.Module);
-            int maxChunkSize = OAEP.OAEP.GetMaxMessageSize(moduleSize);
+            int maxChunkSize = OAEP.GetMaxMessageSize(moduleSize);
 
             using var ms = new MemoryStream();
             using var writer = new BinaryWriter(ms);
 
             foreach (byte[] chunk in TypeFormatter.SplitDataIntoChunks(data, maxChunkSize))
             {
-                byte[] package = OAEP.OAEP.Packing(chunk, moduleSize);
+                byte[] package = OAEP.Packing(chunk, moduleSize);
                 
                 BigInteger m = TypeFormatter.OS2IP(package);
                 
@@ -88,7 +90,7 @@ namespace CSaP.CourseProject.RSA
 
                 byte[] package = TypeFormatter.I2OSP(m, moduleSize);
 
-                byte[] data = OAEP.OAEP.Unpacking(package, moduleSize);
+                byte[] data = OAEP.Unpacking(package, moduleSize);
 
                 result.AddRange(data);
             }
@@ -103,7 +105,7 @@ namespace CSaP.CourseProject.RSA
             int emBits = (int)(_privateKey.Module.GetBitLength() - 1);
             int emLen = (emBits + 7) / 8;
 
-            byte[] EM = PSS.PSS.Packing(data, emBits);
+            byte[] EM = PSS.Packing(data, emBits);
 
             BigInteger m = TypeFormatter.OS2IP(EM);
 
@@ -132,7 +134,7 @@ namespace CSaP.CourseProject.RSA
 
                 byte[] EM = TypeFormatter.I2OSP(m, emLen);
 
-                return PSS.PSS.Verify(data, EM, emBits);
+                return PSS.Verify(data, EM, emBits);
             }
             catch
             {

@@ -1,14 +1,13 @@
 ﻿using CSaP.CourseProject.Service;
 
 namespace CSaP.CourseProject;
-
 class Program
 {
     static void Main()
     {
         try
         {
-            ApplicationContext context = Initializer.Initialize();
+            ApplicationContext context = Initializer.Initialize(cleanInitialization: false);
 
             Shell.Shell shell = Shell.Shell.Create(context);
 
@@ -19,6 +18,7 @@ class Program
             Console.WriteLine($"Fatal error: {ex.Message}");
         }
 
-        Console.WriteLine("Simulation finished");
+        Console.WriteLine("Please, press any key...");
+        Console.ReadKey();
     }
 }

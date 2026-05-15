@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RSA.Test")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3e6968ca05c22613f7186a9bd5631e4da8592825")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bab35195140e47b112bea7a726729067d9626a3a")]
 [assembly: System.Reflection.AssemblyProductAttribute("RSA.Test")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RSA.Test")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

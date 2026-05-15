@@ -342,8 +342,30 @@
       },
       "xunit.runner.visualstudio/2.8.2": {},
       "DataAuthenticationUsingSHA-3/1.0.0": {
+        "dependencies": {
+          "RSA": "1.0.0"
+        },
         "runtime": {
           "DataAuthenticationUsingSHA-3.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "DiscreteMathLibrary/1.0.0": {
+        "runtime": {
+          "DiscreteMathLibrary.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "RSA/1.0.0": {
+        "dependencies": {
+          "DiscreteMathLibrary": "1.0.0"
+        },
+        "runtime": {
+          "RSA.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -463,6 +485,16 @@
       "hashPath": "xunit.runner.visualstudio.2.8.2.nupkg.sha512"
     },
     "DataAuthenticationUsingSHA-3/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DiscreteMathLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RSA/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

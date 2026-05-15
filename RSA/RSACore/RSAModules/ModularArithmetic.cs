@@ -1,14 +1,12 @@
 using System.Numerics;
 using DiscreteMath.BigIntegers.NumberTheory;
 
-namespace CSaP.CourseProject.RSA
+namespace CSaP.CourseProject.RSA.Core
 {
-    public sealed class ModularArithmetic// : IModularArithmetic
+    internal sealed class ModularArithmetic
     {
-        public BigInteger Gcd(BigInteger a, BigInteger b)
-            => NumberTheory.Gcd(a, b);
+        internal BigInteger Gcd(BigInteger a, BigInteger b) => NumberTheory.Gcd(a, b);
 
-        public BigInteger ModInverse(BigInteger a, BigInteger modulus)
-            => NumberTheory.ModInverse(a, modulus);
+        internal BigInteger ModInverse(BigInteger a, BigInteger module) => NumberTheory.ModInverse(a, module);
     }
 }

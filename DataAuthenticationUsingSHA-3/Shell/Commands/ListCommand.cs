@@ -8,6 +8,18 @@ namespace CSaP.CourseProject.Shell.Commands
     {
         private readonly ApplicationContext _context;
         private readonly ParsedCommand _parsed;
+        private readonly CommandDescription _description = new CommandDescription(
+            "list",
+            new List<CommandHelpEntry>()
+            {
+                new("list users", "Show all users"),
+                new("list messages", "Show all messages"),
+                new("list messages --extended", "Show all messages with detailed information")
+            }
+        );
+
+        
+        public CommandDescription Description => _description;
 
 
         public ListCommand(ApplicationContext context, ParsedCommand parsed)
@@ -37,8 +49,7 @@ namespace CSaP.CourseProject.Shell.Commands
                     break;
 
                 default:
-                    throw new FormatException(
-                        "Unknown list target");
+                    throw new FormatException("Unknown list target\n");
             }
         }
 
@@ -60,12 +71,12 @@ namespace CSaP.CourseProject.Shell.Commands
 
             if (!messages.Any())
             {
-                Console.WriteLine("No messages found");
+                Console.WriteLine("No messages found\n");
 
                 return;
             }
 
-            Console.WriteLine("Messages:\n");
+            Console.WriteLine("Messages:");
 
             foreach (SignedMessage message in _context.Messages.GetAll())
             {
@@ -75,6 +86,8 @@ namespace CSaP.CourseProject.Shell.Commands
                         $"""
                         ID: {message.MessageID}
                         Sender: {message.SenderID}
+                        Message: {message.Message}
+                        Signature: {Convert.ToHexString(message.Signature)}
                         Timestamp: {message.Timestamp}
 
                         """);

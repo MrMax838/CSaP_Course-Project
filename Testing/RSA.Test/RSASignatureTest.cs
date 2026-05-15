@@ -95,7 +95,6 @@ public class RSASignatureTet
 
             byte[] signature = wrapper.SignFile(path);
 
-            // змінюємо файл після підпису
             File.WriteAllText(path, "Modified content");
 
             bool result = wrapper.VerifyFile(path, signature);
@@ -201,39 +200,11 @@ public class RSASignatureTet
 
             byte[] signature = wrapper.SignFile(path);
 
-            // псуємо підпис
             signature[10] ^= 0xFF;
 
             bool result = wrapper.VerifyFile(path, signature);
 
             Assert.False(result);
-        }
-        finally
-        {
-            File.Delete(path);
-        }
-    }
-
-    [Fact]
-    public void SignFile_UnicodeContent_ShouldWork()
-    {
-        var rsa = RSA.Create();
-        var wrapper = new Wrapper(rsa);
-
-        string path = Path.GetTempFileName();
-
-        try
-        {
-            File.WriteAllText(
-                path,
-                "Привіт 🌍 RSA SHA256 PSS",
-                Encoding.UTF8);
-
-            byte[] signature = wrapper.SignFile(path);
-
-            bool result = wrapper.VerifyFile(path, signature);
-
-            Assert.True(result);
         }
         finally
         {

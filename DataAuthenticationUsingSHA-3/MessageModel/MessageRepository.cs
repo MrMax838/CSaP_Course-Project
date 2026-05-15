@@ -4,7 +4,7 @@ namespace CSaP.CourseProject.DataModel
 {
     public class MessageRepository
     {
-        private string _path = @"D:\University\3 курс\КСтП +КП\Курсова робота\Code\DataAuthenticationUsingSHA-3\IOData\Messages.json";
+        private string _path = @"D:\University\3 курс\КСтП +КП\Курсовий проєкт\Code\DataAuthenticationUsingSHA-3\IOData\Messages.json";
 
 
         public MessageRepository() {}
