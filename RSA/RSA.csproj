@@ -1,7 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Лаби\Code\Libraries\DiscreteMathLibrary\DiscreteMathLibrary.csproj" />
+    <PackageReference
+    Include="MrMax838.DiscreteMathLibrary"
+    Version="1.0.0" />
   </ItemGroup>
 
   <PropertyGroup>

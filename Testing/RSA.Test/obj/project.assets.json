@@ -290,6 +290,15 @@
           "build/netcoreapp3.1/Microsoft.TestPlatform.TestHost.props": {}
         }
       },
+      "MrMax838.DiscreteMathLibrary/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/DiscreteMathLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net9.0/DiscreteMathLibrary.dll": {}
+        }
+      },
       "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
@@ -412,21 +421,11 @@
           "build/net6.0/xunit.runner.visualstudio.props": {}
         }
       },
-      "DiscreteMathLibrary/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "compile": {
-          "bin/placeholder/DiscreteMathLibrary.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/DiscreteMathLibrary.dll": {}
-        }
-      },
       "RSA/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
-          "DiscreteMathLibrary": "1.0.0"
+          "MrMax838.DiscreteMathLibrary": "1.0.0"
         },
         "compile": {
           "bin/placeholder/RSA.dll": {}
@@ -764,6 +763,17 @@
         "microsoft.testplatform.testhost.nuspec"
       ]
     },
+    "MrMax838.DiscreteMathLibrary/1.0.0": {
+      "sha512": "ZM+gLSllgRbRczylSTJr5xOWyuC1y6MhH2xiu60kaiGl5OE6ivSs8NY6JGSqyf5LD2CV0gZfjHS90vYniU8prA==",
+      "type": "package",
+      "path": "mrmax838.discretemathlibrary/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        "lib/net9.0/DiscreteMathLibrary.dll",
+        "mrmax838.discretemathlibrary.1.0.0.nupkg.sha512",
+        "mrmax838.discretemathlibrary.nuspec"
+      ]
+    },
     "Newtonsoft.Json/13.0.1": {
       "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
       "type": "package",
@@ -956,11 +966,6 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
-    "DiscreteMathLibrary/1.0.0": {
-      "type": "project",
-      "path": "../../../../Лаби/Code/Libraries/DiscreteMathLibrary/DiscreteMathLibrary.csproj",
-      "msbuildProject": "../../../../Лаби/Code/Libraries/DiscreteMathLibrary/DiscreteMathLibrary.csproj"
-    },
     "RSA/1.0.0": {
       "type": "project",
       "path": "../../RSA/RSA.csproj",
@@ -1001,9 +1006,8 @@
         "net9.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.pkg.github.com/MrMax838/index.json": {}
       },
       "frameworks": {
         "net9.0": {

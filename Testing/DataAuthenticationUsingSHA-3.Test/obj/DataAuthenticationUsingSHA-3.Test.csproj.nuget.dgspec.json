@@ -1,40 +1,34 @@
 {
   "format": 1,
   "restore": {
-    "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\Testing\\DataAuthenticationUsingSHA-3.Test\\DataAuthenticationUsingSHA-3.Test.csproj": {}
+    "D:\\Temp\\Code\\CSaP_Course-Project\\Testing\\DataAuthenticationUsingSHA-3.Test\\DataAuthenticationUsingSHA-3.Test.csproj": {}
   },
   "projects": {
-    "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\DataAuthenticationUsingSHA-3\\DataAuthenticationUsingSHA-3.csproj": {
+    "D:\\Temp\\Code\\CSaP_Course-Project\\DataAuthenticationUsingSHA-3\\DataAuthenticationUsingSHA-3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\DataAuthenticationUsingSHA-3\\DataAuthenticationUsingSHA-3.csproj",
+        "projectUniqueName": "D:\\Temp\\Code\\CSaP_Course-Project\\DataAuthenticationUsingSHA-3\\DataAuthenticationUsingSHA-3.csproj",
         "projectName": "DataAuthenticationUsingSHA-3",
-        "projectPath": "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\DataAuthenticationUsingSHA-3\\DataAuthenticationUsingSHA-3.csproj",
-        "packagesPath": "C:\\Users\\MrMax\\.nuget\\packages\\",
-        "outputPath": "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\DataAuthenticationUsingSHA-3\\obj\\",
+        "projectPath": "D:\\Temp\\Code\\CSaP_Course-Project\\DataAuthenticationUsingSHA-3\\DataAuthenticationUsingSHA-3.csproj",
+        "packagesPath": "C:\\Users\\mrmax\\.nuget\\packages\\",
+        "outputPath": "D:\\Temp\\Code\\CSaP_Course-Project\\DataAuthenticationUsingSHA-3\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\MrMax\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\mrmax\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.pkg.github.com/MrMax838/index.json": {}
         },
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\RSA\\RSA.csproj": {
-                "projectPath": "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\RSA\\RSA.csproj"
+              "D:\\Temp\\Code\\CSaP_Course-Project\\RSA\\RSA.csproj": {
+                "projectPath": "D:\\Temp\\Code\\CSaP_Course-Project\\RSA\\RSA.csproj"
               }
             }
           }
@@ -74,39 +68,29 @@
         }
       }
     },
-    "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\RSA\\RSA.csproj": {
+    "D:\\Temp\\Code\\CSaP_Course-Project\\RSA\\RSA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\RSA\\RSA.csproj",
+        "projectUniqueName": "D:\\Temp\\Code\\CSaP_Course-Project\\RSA\\RSA.csproj",
         "projectName": "RSA",
-        "projectPath": "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\RSA\\RSA.csproj",
-        "packagesPath": "C:\\Users\\MrMax\\.nuget\\packages\\",
-        "outputPath": "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\RSA\\obj\\",
+        "projectPath": "D:\\Temp\\Code\\CSaP_Course-Project\\RSA\\RSA.csproj",
+        "packagesPath": "C:\\Users\\mrmax\\.nuget\\packages\\",
+        "outputPath": "D:\\Temp\\Code\\CSaP_Course-Project\\RSA\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\MrMax\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\mrmax\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.pkg.github.com/MrMax838/index.json": {}
         },
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
-            "projectReferences": {
-              "D:\\University\\3 курс\\КСтП +КП\\Лаби\\Code\\Libraries\\DiscreteMathLibrary\\DiscreteMathLibrary.csproj": {
-                "projectPath": "D:\\University\\3 курс\\КСтП +КП\\Лаби\\Code\\Libraries\\DiscreteMathLibrary\\DiscreteMathLibrary.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {
@@ -124,6 +108,12 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "dependencies": {
+            "MrMax838.DiscreteMathLibrary": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -144,37 +134,31 @@
         }
       }
     },
-    "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\Testing\\DataAuthenticationUsingSHA-3.Test\\DataAuthenticationUsingSHA-3.Test.csproj": {
+    "D:\\Temp\\Code\\CSaP_Course-Project\\Testing\\DataAuthenticationUsingSHA-3.Test\\DataAuthenticationUsingSHA-3.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\Testing\\DataAuthenticationUsingSHA-3.Test\\DataAuthenticationUsingSHA-3.Test.csproj",
+        "projectUniqueName": "D:\\Temp\\Code\\CSaP_Course-Project\\Testing\\DataAuthenticationUsingSHA-3.Test\\DataAuthenticationUsingSHA-3.Test.csproj",
         "projectName": "DataAuthenticationUsingSHA-3.Test",
-        "projectPath": "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\Testing\\DataAuthenticationUsingSHA-3.Test\\DataAuthenticationUsingSHA-3.Test.csproj",
-        "packagesPath": "C:\\Users\\MrMax\\.nuget\\packages\\",
-        "outputPath": "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\Testing\\DataAuthenticationUsingSHA-3.Test\\obj\\",
+        "projectPath": "D:\\Temp\\Code\\CSaP_Course-Project\\Testing\\DataAuthenticationUsingSHA-3.Test\\DataAuthenticationUsingSHA-3.Test.csproj",
+        "packagesPath": "C:\\Users\\mrmax\\.nuget\\packages\\",
+        "outputPath": "D:\\Temp\\Code\\CSaP_Course-Project\\Testing\\DataAuthenticationUsingSHA-3.Test\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\MrMax\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\mrmax\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.pkg.github.com/MrMax838/index.json": {}
         },
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\DataAuthenticationUsingSHA-3\\DataAuthenticationUsingSHA-3.csproj": {
-                "projectPath": "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\DataAuthenticationUsingSHA-3\\DataAuthenticationUsingSHA-3.csproj"
+              "D:\\Temp\\Code\\CSaP_Course-Project\\DataAuthenticationUsingSHA-3\\DataAuthenticationUsingSHA-3.csproj": {
+                "projectPath": "D:\\Temp\\Code\\CSaP_Course-Project\\DataAuthenticationUsingSHA-3\\DataAuthenticationUsingSHA-3.csproj"
               }
             }
           }
@@ -229,72 +213,6 @@
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.314/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\University\\3 курс\\КСтП +КП\\Лаби\\Code\\Libraries\\DiscreteMathLibrary\\DiscreteMathLibrary.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\University\\3 курс\\КСтП +КП\\Лаби\\Code\\Libraries\\DiscreteMathLibrary\\DiscreteMathLibrary.csproj",
-        "projectName": "DiscreteMathLibrary",
-        "projectPath": "D:\\University\\3 курс\\КСтП +КП\\Лаби\\Code\\Libraries\\DiscreteMathLibrary\\DiscreteMathLibrary.csproj",
-        "packagesPath": "C:\\Users\\MrMax\\.nuget\\packages\\",
-        "outputPath": "D:\\University\\3 курс\\КСтП +КП\\Лаби\\Code\\Libraries\\DiscreteMathLibrary\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\MrMax\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net9.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net9.0": {
-            "targetAlias": "net9.0",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
-      },
-      "frameworks": {
-        "net9.0": {
-          "targetAlias": "net9.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.313/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

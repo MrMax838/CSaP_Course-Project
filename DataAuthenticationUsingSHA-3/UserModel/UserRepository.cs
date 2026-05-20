@@ -6,10 +6,15 @@ namespace CSaP.CourseProject.DataModel
 {
     public class UserRepository
     {
-        private string _path = @"D:\University\3 курс\КСтП +КП\Курсовий проєкт\Code\DataAuthenticationUsingSHA-3\IOData\Users.json";
+        private string _path = string.Empty;
 
 
-        public UserRepository() {}
+        public UserRepository()
+        {
+            string baseDir = GetBaseDir();
+
+            _path = Path.Combine(baseDir, "DataAuthenticationUsingSHA-3", "IOData", "Users.json");
+        }
 
         public UserRepository(string path)
         {
@@ -109,6 +114,18 @@ namespace CSaP.CourseProject.DataModel
             string json = JsonSerializer.Serialize(users, new JsonSerializerOptions() { WriteIndented = true });
 
             File.WriteAllText(_path, json);
+        }
+
+        private static string GetBaseDir()
+        {
+            string baseDir = AppContext.BaseDirectory;
+
+            while(!File.Exists(Path.Combine(baseDir, "DataAuthenticationUsingSHA-3.sln")))
+            {
+                baseDir = Directory.GetParent(baseDir)!.FullName;
+            }
+
+            return baseDir;
         }
     }
 }
