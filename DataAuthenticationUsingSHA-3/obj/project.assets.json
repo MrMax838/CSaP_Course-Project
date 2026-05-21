@@ -2,21 +2,20 @@
   "version": 3,
   "targets": {
     "net9.0": {
-      "DiscreteMathLibrary/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
+      "MrMax838.DiscreteMathLibrary/1.0.0": {
+        "type": "package",
         "compile": {
-          "bin/placeholder/DiscreteMathLibrary.dll": {}
+          "lib/net9.0/DiscreteMathLibrary.dll": {}
         },
         "runtime": {
-          "bin/placeholder/DiscreteMathLibrary.dll": {}
+          "lib/net9.0/DiscreteMathLibrary.dll": {}
         }
       },
       "RSA/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
-          "DiscreteMathLibrary": "1.0.0"
+          "MrMax838.DiscreteMathLibrary": "1.0.0"
         },
         "compile": {
           "bin/placeholder/RSA.dll": {}
@@ -28,10 +27,16 @@
     }
   },
   "libraries": {
-    "DiscreteMathLibrary/1.0.0": {
-      "type": "project",
-      "path": "../../../Лаби/Code/Libraries/DiscreteMathLibrary/DiscreteMathLibrary.csproj",
-      "msbuildProject": "../../../Лаби/Code/Libraries/DiscreteMathLibrary/DiscreteMathLibrary.csproj"
+    "MrMax838.DiscreteMathLibrary/1.0.0": {
+      "sha512": "ZM+gLSllgRbRczylSTJr5xOWyuC1y6MhH2xiu60kaiGl5OE6ivSs8NY6JGSqyf5LD2CV0gZfjHS90vYniU8prA==",
+      "type": "package",
+      "path": "mrmax838.discretemathlibrary/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        "lib/net9.0/DiscreteMathLibrary.dll",
+        "mrmax838.discretemathlibrary.1.0.0.nupkg.sha512",
+        "mrmax838.discretemathlibrary.nuspec"
+      ]
     },
     "RSA/1.0.0": {
       "type": "project",
@@ -69,9 +74,8 @@
         "net9.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.pkg.github.com/MrMax838/index.json": {}
       },
       "frameworks": {
         "net9.0": {

@@ -6,10 +6,15 @@ namespace CSaP.CourseProject.Service
     {
         public static ApplicationContext Initialize(
             int rsaKeySiza = 1024, 
-            string userPath = @"D:\University\3 курс\КСтП +КП\Курсовий проєкт\Code\DataAuthenticationUsingSHA-3\IOData\Users.json", 
-            string messagePath = @"D:\University\3 курс\КСтП +КП\Курсовий проєкт\Code\DataAuthenticationUsingSHA-3\IOData\Messages.json", 
+            string userPath = "", 
+            string messagePath = "", 
             bool cleanInitialization = true)
         {
+            string baseDir = GetBaseDir();
+
+            if (userPath == "") userPath = Path.Combine(baseDir, "DataAuthenticationUsingSHA-3", "IOData", "Users.json");
+            if (messagePath == "") messagePath = Path.Combine(baseDir, "DataAuthenticationUsingSHA-3", "IOData", "Messages.json");
+
             UserRepository users = new();
             MessageRepository messages = new();
 
@@ -27,6 +32,19 @@ namespace CSaP.CourseProject.Service
             }
 
             return new(users, messages);
+        }
+
+
+        private static string GetBaseDir()
+        {
+            string baseDir = AppContext.BaseDirectory;
+
+            while(!File.Exists(Path.Combine(baseDir, "DataAuthenticationUsingSHA-3.sln")))
+            {
+                baseDir = Directory.GetParent(baseDir)!.FullName;
+            }
+
+            return baseDir;
         }
 
         private static void EnsureFileInitialized(string path)

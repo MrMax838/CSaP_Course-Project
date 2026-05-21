@@ -4,10 +4,15 @@ namespace CSaP.CourseProject.DataModel
 {
     public class MessageRepository
     {
-        private string _path = @"D:\University\3 курс\КСтП +КП\Курсовий проєкт\Code\DataAuthenticationUsingSHA-3\IOData\Messages.json";
+        private string _path = string.Empty;
 
 
-        public MessageRepository() {}
+        public MessageRepository()
+        {
+            string baseDir = GetBaseDir();
+
+            _path = Path.Combine(baseDir, "DataAuthenticationUsingSHA-3", "IOData", "Messages.json");
+        }
         
         public MessageRepository(string path)
         {
@@ -97,6 +102,18 @@ namespace CSaP.CourseProject.DataModel
             string json = JsonSerializer.Serialize(records, new JsonSerializerOptions() { WriteIndented = true });
 
             File.WriteAllText(_path, json);
+        }
+
+        private static string GetBaseDir()
+        {
+            string baseDir = AppContext.BaseDirectory;
+
+            while(!File.Exists(Path.Combine(baseDir, "DataAuthenticationUsingSHA-3.sln")))
+            {
+                baseDir = Directory.GetParent(baseDir)!.FullName;
+            }
+
+            return baseDir;
         }
     }
 }

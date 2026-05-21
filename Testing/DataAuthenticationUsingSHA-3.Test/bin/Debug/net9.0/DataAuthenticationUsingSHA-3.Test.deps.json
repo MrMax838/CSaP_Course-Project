@@ -279,6 +279,14 @@
           }
         }
       },
+      "MrMax838.DiscreteMathLibrary/1.0.0": {
+        "runtime": {
+          "lib/net9.0/DiscreteMathLibrary.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Newtonsoft.Json/13.0.1": {
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
@@ -352,17 +360,9 @@
           }
         }
       },
-      "DiscreteMathLibrary/1.0.0": {
-        "runtime": {
-          "DiscreteMathLibrary.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
       "RSA/1.0.0": {
         "dependencies": {
-          "DiscreteMathLibrary": "1.0.0"
+          "MrMax838.DiscreteMathLibrary": "1.0.0"
         },
         "runtime": {
           "RSA.dll": {
@@ -413,6 +413,13 @@
       "sha512": "sha512-MiPEJQNyADfwZ4pJNpQex+t9/jOClBGMiCiVVFuELCMSX2nmNfvUor3uFVxNNCg30uxDP8JDYfPnMXQzsfzYyg==",
       "path": "microsoft.testplatform.testhost/17.12.0",
       "hashPath": "microsoft.testplatform.testhost.17.12.0.nupkg.sha512"
+    },
+    "MrMax838.DiscreteMathLibrary/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZM+gLSllgRbRczylSTJr5xOWyuC1y6MhH2xiu60kaiGl5OE6ivSs8NY6JGSqyf5LD2CV0gZfjHS90vYniU8prA==",
+      "path": "mrmax838.discretemathlibrary/1.0.0",
+      "hashPath": "mrmax838.discretemathlibrary.1.0.0.nupkg.sha512"
     },
     "Newtonsoft.Json/13.0.1": {
       "type": "package",
@@ -485,11 +492,6 @@
       "hashPath": "xunit.runner.visualstudio.2.8.2.nupkg.sha512"
     },
     "DataAuthenticationUsingSHA-3/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DiscreteMathLibrary/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
