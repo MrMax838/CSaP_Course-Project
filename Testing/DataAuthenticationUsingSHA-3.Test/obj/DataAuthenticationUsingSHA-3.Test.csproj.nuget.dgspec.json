@@ -1,20 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Temp\\Code\\CSaP_Course-Project\\Testing\\DataAuthenticationUsingSHA-3.Test\\DataAuthenticationUsingSHA-3.Test.csproj": {}
+    "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\Testing\\DataAuthenticationUsingSHA-3.Test\\DataAuthenticationUsingSHA-3.Test.csproj": {}
   },
   "projects": {
-    "D:\\Temp\\Code\\CSaP_Course-Project\\DataAuthenticationUsingSHA-3\\DataAuthenticationUsingSHA-3.csproj": {
+    "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\DataAuthenticationUsingSHA-3\\DataAuthenticationUsingSHA-3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Temp\\Code\\CSaP_Course-Project\\DataAuthenticationUsingSHA-3\\DataAuthenticationUsingSHA-3.csproj",
+        "projectUniqueName": "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\DataAuthenticationUsingSHA-3\\DataAuthenticationUsingSHA-3.csproj",
         "projectName": "DataAuthenticationUsingSHA-3",
-        "projectPath": "D:\\Temp\\Code\\CSaP_Course-Project\\DataAuthenticationUsingSHA-3\\DataAuthenticationUsingSHA-3.csproj",
-        "packagesPath": "C:\\Users\\mrmax\\.nuget\\packages\\",
-        "outputPath": "D:\\Temp\\Code\\CSaP_Course-Project\\DataAuthenticationUsingSHA-3\\obj\\",
+        "projectPath": "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\DataAuthenticationUsingSHA-3\\DataAuthenticationUsingSHA-3.csproj",
+        "packagesPath": "C:\\Users\\MrMax\\.nuget\\packages\\",
+        "outputPath": "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\DataAuthenticationUsingSHA-3\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\mrmax\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\MrMax\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -27,8 +32,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "D:\\Temp\\Code\\CSaP_Course-Project\\RSA\\RSA.csproj": {
-                "projectPath": "D:\\Temp\\Code\\CSaP_Course-Project\\RSA\\RSA.csproj"
+              "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\RSA\\RSA.csproj": {
+                "projectPath": "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\RSA\\RSA.csproj"
               }
             }
           }
@@ -68,17 +73,22 @@
         }
       }
     },
-    "D:\\Temp\\Code\\CSaP_Course-Project\\RSA\\RSA.csproj": {
+    "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\RSA\\RSA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Temp\\Code\\CSaP_Course-Project\\RSA\\RSA.csproj",
+        "projectUniqueName": "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\RSA\\RSA.csproj",
         "projectName": "RSA",
-        "projectPath": "D:\\Temp\\Code\\CSaP_Course-Project\\RSA\\RSA.csproj",
-        "packagesPath": "C:\\Users\\mrmax\\.nuget\\packages\\",
-        "outputPath": "D:\\Temp\\Code\\CSaP_Course-Project\\RSA\\obj\\",
+        "projectPath": "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\RSA\\RSA.csproj",
+        "packagesPath": "C:\\Users\\MrMax\\.nuget\\packages\\",
+        "outputPath": "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\RSA\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\mrmax\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\MrMax\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -134,17 +144,22 @@
         }
       }
     },
-    "D:\\Temp\\Code\\CSaP_Course-Project\\Testing\\DataAuthenticationUsingSHA-3.Test\\DataAuthenticationUsingSHA-3.Test.csproj": {
+    "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\Testing\\DataAuthenticationUsingSHA-3.Test\\DataAuthenticationUsingSHA-3.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Temp\\Code\\CSaP_Course-Project\\Testing\\DataAuthenticationUsingSHA-3.Test\\DataAuthenticationUsingSHA-3.Test.csproj",
+        "projectUniqueName": "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\Testing\\DataAuthenticationUsingSHA-3.Test\\DataAuthenticationUsingSHA-3.Test.csproj",
         "projectName": "DataAuthenticationUsingSHA-3.Test",
-        "projectPath": "D:\\Temp\\Code\\CSaP_Course-Project\\Testing\\DataAuthenticationUsingSHA-3.Test\\DataAuthenticationUsingSHA-3.Test.csproj",
-        "packagesPath": "C:\\Users\\mrmax\\.nuget\\packages\\",
-        "outputPath": "D:\\Temp\\Code\\CSaP_Course-Project\\Testing\\DataAuthenticationUsingSHA-3.Test\\obj\\",
+        "projectPath": "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\Testing\\DataAuthenticationUsingSHA-3.Test\\DataAuthenticationUsingSHA-3.Test.csproj",
+        "packagesPath": "C:\\Users\\MrMax\\.nuget\\packages\\",
+        "outputPath": "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\Testing\\DataAuthenticationUsingSHA-3.Test\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\mrmax\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\MrMax\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -157,8 +172,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "D:\\Temp\\Code\\CSaP_Course-Project\\DataAuthenticationUsingSHA-3\\DataAuthenticationUsingSHA-3.csproj": {
-                "projectPath": "D:\\Temp\\Code\\CSaP_Course-Project\\DataAuthenticationUsingSHA-3\\DataAuthenticationUsingSHA-3.csproj"
+              "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\DataAuthenticationUsingSHA-3\\DataAuthenticationUsingSHA-3.csproj": {
+                "projectPath": "D:\\University\\3 курс\\КСтП +КП\\Курсовий проєкт\\Code\\DataAuthenticationUsingSHA-3\\DataAuthenticationUsingSHA-3.csproj"
               }
             }
           }
